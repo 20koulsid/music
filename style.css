@@ -7,6 +7,7 @@ body {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 nav {
     font-family: "Ubuntu", sans-serif;
@@ -103,4 +104,42 @@ nav ul li {
     opacity: 0;
     transition: opacity 0.5s ease-in;
     font-family: "Varela Round", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .songList h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .songItemContainer {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .bottom {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .brand img {
+        height: 30px;
+    }
+
+    .icons i {
+        font-size: 2rem;
+    }
+
+    .songInfo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .songInfo img {
+        margin-bottom: 10px;
+    }
 }
